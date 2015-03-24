@@ -8,13 +8,12 @@ View example here: [cmac2712.github.io/notificationjs](http://cmac2712.github.io
 
 ## Usage
 
-Just include the css in your project
+Just include the css in your project (or you can compile the scss yourself) 
 
 ```HTML
 <link rel="stylesheet" href="styles/main.css">
 ```
-
-...or you can compile the scss yourself.
+And include the js before the closing </body> tag.
 
 ```HTML
 <script src="lib/notificationjs.min.js"></script>
