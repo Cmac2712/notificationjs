@@ -1,0 +1,76 @@
+@import "./animations";
+
+/* Variables */
+
+$spacing-unit: 16px;
+$spacing-unit--half: $spacing-unit/2;
+
+$ui-color: #ddd;
+$ui-color--tint: lighten($ui-color, 5%);
+
+@mixin shadow () {
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+}
+
+.notification {
+    position: fixed;
+    right: $spacing-unit--half;
+    top: $spacing-unit--half;
+    width: $spacing-unit*25;
+    background-color: $ui-color--tint;
+    z-index: 99999;
+    -webkit-transform: translate3d(0,-150%,0);
+	    transform: translate3d(0,-150%,0);
+    @include shadow();
+}
+
+.notification-2 {
+    left: $spacing-unit--half;
+    right: auto;
+}
+
+.notification-3 {
+    -webkit-transform: translate3d(0,150%,0);
+            transform: translate3d(0,150%,0);
+    top: auto;
+    bottom: $spacing-unit--half;
+    left: $spacing-unit--half;
+    right: auto;
+}
+
+.slideDown {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+    transition: transform 3s ease-in;
+    transition: -webkit-transform 3s ease-in;
+    transition: opacity, .25s;
+}
+
+.slideUp {
+    opacity: 0;
+    -webkit-transform: translate3d(0,-150%,0);
+	    transform: translate3d(0,-150%,0);
+    transition: transform 3s ease-in;
+    transition: -webkit-transform 3s ease-in;
+    transition: opacity, .25s;
+}
+
+.notification__img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin-right: $spacing-unit--half;  
+    background-size: cover;
+}
+
+.notification__img img {
+    width: 100%;
+}
+
+.notification__title,
+.notification__description {
+    font-size: 1em;
+    margin: $spacing-unit--half 0;
+    padding-left: $spacing-unit--half;
+}
