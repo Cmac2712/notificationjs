@@ -29,10 +29,10 @@ var myNotification = new Notification({
 			    description: "Lorem ipsum dolar sit amet",
 			    image: "images/my-image.jpg",
 			    imageAlt: "My Image",
-                            enterClass: "animated fade-in", 
-                            exitClass: "animated fade-out",
+			    enterClass: "animated fade-in", 
+			    exitClass: "animated fade-out",
 			    duration: 5000
-			  });
+});
 ```
 
 enterClass, and exitClass are classess added just after initiation and after the specified duration.
@@ -40,6 +40,6 @@ enterClass, and exitClass are classess added just after initiation and after the
 To activate the notification:
 
 ```javascript
-myNotification.go()a
+myNotification.go();
 ```
 
